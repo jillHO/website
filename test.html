@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color:black;
+            color:white;
+        }
+        .header {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        min-height: 100vh;
+        max-width: 1200px;
+        width: 80%;
+      }
+       .header sub{
+           font-size:1.25rem;
+           font-weight:bold;
+
+       }
+       .header h1{
+           font-weight:bold;
+           font-size:4rem;
+
+       }
+       .header p{
+           letter-spacing:3px;
+           font-size:1.25rem;
+           line-height:1.5;
+
+       }
+       .header a {
+        display: inline-block;
+        margin-top: 35px;
+        padding: 20px 40px;
+        border: #e9eaf4 solid 1px;
+        color: white;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-size: 1.15rem;
+      }
+      .header__container {
+        flex: 1;
+      }
+      .header__cover {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-left: 2rem;
+        width: 600px;
+        height: 600px;
+        border: #e9eaf4 solid 6px;
+        border-radius: 50%;
+        background-color: white;
+        animation: scaleElement 1.5s alternate ease-in-out infinite;
+      }
+
+
+      
+      .header__cover img{
+          width:100%
+      }
+      
+      .header__cover::before,
+      .header__cover::after {
+        position: absolute;
+        width: 110%;
+        height: 110%;
+        border: #e9eaf4 solid 6px;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        content: '';
+        animation: rotateElement 1.5s ease-in-out infinite;
+      }
+      .header__cover::after {
+        width: 105%;
+        height: 105%;
+        animation-delay: 0.5s;
+        animation-direction: reverse;
+      }
+      @keyframes rotateElement {
+        100% {
+          transform: rotateZ(360deg);
+        }
+      }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <article class="header__container">
+            <sub>小標題文字</sub>
+            <h1>大標題文字</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis perspiciatis accusamus veniam cumque recusandae aliquid assumenda quas doloremque, necessitatibus nostrum at autem amet eum porro placeat nam modi dolore omnis!</p>
+           <a href="#">click me</a>
+        </article>
+        <aside class="header__cover">
+            <img src="Mask Group 2.png" alt="圖片展示">
+        </aside>
+      </header>
+</body>
+</html>
