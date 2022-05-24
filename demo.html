@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const turtle = {
+        name: '鑽石 🐢',
+        legs: 4,
+        shell: true,
+        type: '北美鑽紋龜',
+        meal: 10,
+        diet: '生魚片？'
+    }
+    
+    function feed(animal) {
+        return `餵食 ${animal.name} ${animal.meal} 小片 ${animal.diet}`;
+    }
+    
+    // 更良好的解答
+    
+    function feed({ name, meal, diet }) {
+    	return `餵食 ${name} ${meal} 小片 ${diet}`;
+    }
+    
+    // 或者
+    
+    // function feed(animal) {
+    // 	const { name, meal, diet } = animal;
+    // 	return `餵食 ${name} ${meal} 小片 ${diet}`;
+    // }
+    
+    console.log(feed(turtle))
+
+
+    var array = ['apple', 'banana', 'orange'];
+
+      array.forEach(function (element) {
+        document.write(element);
+      });
+
+      console.log(array);
+
+      const array1 = [1, 4, 9, 16];
+
+      const map1 = array1.map((x) => x * 2);
+
+      console.log(array1);
+      console.log(map1);
+      // const map1 = array1.map(function (x) {
+      //   return x * 2;
+      // });
+      </script>
+</body>
+
+</html>
